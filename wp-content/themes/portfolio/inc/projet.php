@@ -20,7 +20,7 @@ function register_projet(){
 		'not_found_in_trash' => __( 'Aucun projet trouvé dans la corbeille')
 		);
 
-	$fields = array('title');
+	$fields = array('title', 'editor', 'thumbnail', 'author');
 
 	$args = array(
 		'labels' => $labels,
@@ -37,7 +37,17 @@ function register_projet(){
 		'supports' => $fields
 		);
 
-	register_post_type( 'projet', $args );
+	// on enregistre le nouveau type de contenu
+	register_post_type('projet', $args);
+
+	// on enregistre la nouvelle taxonomie
+	register_taxonomy('cours', array('projet'), array(
+		'hierarchical' => true,
+		'label' => 'Cours',
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+		'rewrite' => array('slug' => 'cours')));
 
 }
 

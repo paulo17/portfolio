@@ -13,12 +13,13 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<?php
+			// test requete recuperation projet
+			$projets = new WP_Query(array('post_type' => 'projet'));
+		 ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php if ( $projets->have_posts() ) : ?>
+			<?php while ( $projets->have_posts() ) : $projets->the_post(); ?>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
@@ -31,15 +32,10 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php portfolio_paging_nav(); ?>
-
 		<?php else : ?>
-
 			<?php get_template_part( 'content', 'none' ); ?>
-
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

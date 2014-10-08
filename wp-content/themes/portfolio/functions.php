@@ -6,8 +6,8 @@ require_once get_template_directory() . '/inc/projet.php';
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+if (!isset($content_width)) {
+	$content_width = 960; /* pixels */
 }
 
 if ( ! function_exists( 'portfolio_setup' ) ) :
