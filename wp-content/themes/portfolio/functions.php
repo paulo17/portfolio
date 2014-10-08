@@ -1,4 +1,27 @@
 <?php
+// add by Paul
+add_filter('stylesheet_directory_uri','css_dir', 10, 2);
+function css_dir($stylesheet_dir_uri, $stylesheet) {
+	return $stylesheet_dir_uri.'/css';
+}
+
+// exemple de creation de custom post type
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+	register_post_type( 'product',
+		array(
+			'labels' => array(
+				'name' => __( 'Products' ),
+				'singular_name' => __( 'Product' )
+				),
+			'public' => true,
+			'has_archive' => true,
+			)
+		);
+}
+
+
+
 /**
  * portfolio functions and definitions
  *
@@ -43,7 +66,7 @@ function portfolio_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'portfolio' ),
-	) );
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -51,7 +74,7 @@ function portfolio_setup() {
 	 */
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
+		) );
 
 	/*
 	 * Enable support for Post Formats.
@@ -59,13 +82,13 @@ function portfolio_setup() {
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
-	) );
+		) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'portfolio_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-	) ) );
+		) ) );
 }
 endif; // portfolio_setup
 add_action( 'after_setup_theme', 'portfolio_setup' );
@@ -84,7 +107,7 @@ function portfolio_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
-	) );
+		) );
 }
 add_action( 'widgets_init', 'portfolio_widgets_init' );
 
