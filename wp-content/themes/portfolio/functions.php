@@ -1,32 +1,7 @@
 <?php
-// add by Paul
-add_filter('stylesheet_directory_uri','css_dir', 10, 2);
-function css_dir($stylesheet_dir_uri, $stylesheet) {
-	return $stylesheet_dir_uri.'/css';
-}
 
-// exemple de creation de custom post type
-add_action( 'init', 'create_post_type' );
-function create_post_type() {
-	register_post_type( 'product',
-		array(
-			'labels' => array(
-				'name' => __( 'Products' ),
-				'singular_name' => __( 'Product' )
-				),
-			'public' => true,
-			'has_archive' => true,
-			)
-		);
-}
+require_once get_template_directory() . '/inc/projet.php';
 
-
-
-/**
- * portfolio functions and definitions
- *
- * @package portfolio
- */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
