@@ -1,13 +1,16 @@
 <?php
+require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/jetpack.php';
 
-require_once get_template_directory() . '/inc/projet.php';
-
+require get_template_directory() . '/inc/realisation.php';
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if (!isset($content_width)) {
-	$content_width = 960; /* pixels */
+if ( ! isset( $content_width ) ) {
+	$content_width = 640; /* pixels */
 }
 
 if ( ! function_exists( 'portfolio_setup' ) ) :
@@ -41,7 +44,7 @@ function portfolio_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'portfolio' ),
-		) );
+	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -49,7 +52,7 @@ function portfolio_setup() {
 	 */
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-		) );
+	) );
 
 	/*
 	 * Enable support for Post Formats.
@@ -57,13 +60,13 @@ function portfolio_setup() {
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
-		) );
+	) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'portfolio_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-		) ) );
+	) ) );
 }
 endif; // portfolio_setup
 add_action( 'after_setup_theme', 'portfolio_setup' );
@@ -82,7 +85,7 @@ function portfolio_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
-		) );
+	) );
 }
 add_action( 'widgets_init', 'portfolio_widgets_init' );
 
@@ -101,28 +104,3 @@ function portfolio_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
