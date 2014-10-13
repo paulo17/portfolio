@@ -79,9 +79,11 @@ function register_matiere() {
 
 }
 
+
 // Hook into the 'init' action
 add_action( 'init', 'register_realisation', 0 );
 // Hook into the 'init' action
 add_action( 'init', 'register_matiere', 0 );
+add_image_size('realisation', 300, 225, false);
 
  ?>

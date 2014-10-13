@@ -45,11 +45,14 @@ function portfolio_setup() {
 endif; // portfolio_setup
 
 add_action( 'after_setup_theme', 'portfolio_setup' );
+add_action('send_headers', 'custom_route');
+
+function custom_route(){
+	// var_dump($_SERVER);
+}
 
 /**
  * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function portfolio_widgets_init() {
 	register_sidebar( array(
