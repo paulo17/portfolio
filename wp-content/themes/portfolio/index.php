@@ -13,7 +13,7 @@ get_header();
 			'post_id' => 'new_post',
 			'new_post' => array(
 				'post_type'	=> 'realisation',
-				'post_status' => 'publish'
+				'post_status' => 'pending'
 				),
 			'form' => true,
 			'form_attributes' => array(
@@ -35,4 +35,4 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php //get_footer(); ?>
+<?php get_footer(); ?>
