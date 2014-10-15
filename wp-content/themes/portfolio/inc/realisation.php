@@ -17,14 +17,14 @@ function register_realisation() {
 		'search_items'        => 'Rechercher réalisation',
 		'not_found'           => 'Not found',
 		'not_found_in_trash'  => 'Not found in Trash',
-	);
+		);
 	$args = array(
 		'label'               => 'realisation',
 		'description'         => 'Réalisation des etudiants',
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'tag'),
 		'hierarchical'        => false,
-		'taxonomies' => array( 'category'),
+		'taxonomies' => array('category'),
 		'public'              => true,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
@@ -36,7 +36,7 @@ function register_realisation() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-	);
+		);
 	register_post_type( 'realisation', $args );
 
 }
@@ -59,31 +59,84 @@ function register_technology() {
 		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
 		'choose_from_most_used'      => __( 'Choose from the most used items', 'text_domain' ),
 		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		);
+$rewrite = array(
+	'slug'                       => 'cours',
+	'with_front'                 => true,
+	'hierarchical'               => false,
 	);
-	$rewrite = array(
-		'slug'                       => 'cours',
-		'with_front'                 => true,
-		'hierarchical'               => false,
+$args = array(
+	'labels'                     => $labels,
+	'hierarchical'               => false,
+	'public'                     => true,
+	'show_ui'                    => true,
+	'show_admin_column'          => true,
+	'show_in_nav_menus'          => true,
+	'show_tagcloud'              => true,
+	'rewrite'                    => $rewrite,
 	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-		'rewrite'                    => $rewrite,
-	);
-	register_taxonomy( 'technologie', array( 'realisation' ), $args );
-
+register_taxonomy( 'technologie', array( 'realisation' ), $args );
 }
+
+
+function insert_category_term(){
+
+	wp_insert_term('Année', 'category');
+	wp_insert_term('Promotion', 'category');
+
+	$find = false;
+	foreach (get_terms('category', array('hide_empty' => 0)) as $key => $category) {
+		if($category->name == 'Année'){
+			$annee = $category;
+		}
+		if($category->name == 'Promotion'){
+			$promotion = $category;
+		}
+	}
+
+	wp_insert_term('2010', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2011', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2012', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2013', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2014', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2015', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2016', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2017', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('2018', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term(date('Y', strtotime('+5 year')), 'category', array('parent' => $promotion->term_id));
+
+	wp_insert_term('H1', 'category', array('parent' => $annee->term_id));
+	wp_insert_term('H2', 'category', array('parent' => $annee->term_id));
+	wp_insert_term('H3', 'category', array('parent' => $annee->term_id));
+	wp_insert_term('H4', 'category', array('parent' => $annee->term_id));
+	wp_insert_term('H5', 'category', array('parent' => $annee->term_id));
+}
+
+function insert_technology_term(){
+	wp_insert_term('Wordpress', 'technologie');
+	wp_insert_term('PHP', 'technologie');
+	wp_insert_term('Javascript', 'technologie');
+	wp_insert_term('Drupal', 'technologie');
+	wp_insert_term('CMS', 'technologie');
+	wp_insert_term('Symfony', 'technologie');
+	wp_insert_term('Angular', 'technologie');
+	wp_insert_term('NodeJS', 'technologie');
+	wp_insert_term('Backbone', 'technologie');
+	wp_insert_term('HTML', 'technologie');
+	wp_insert_term('CSS', 'technologie');
+	wp_insert_term('WebGL', 'technologie');
+	wp_insert_term('J2EE', 'technologie');
+}
+
+
 
 
 // Hook into the 'init' action
 add_action( 'init', 'register_realisation', 0 );
 // Hook into the 'init' action
 add_action( 'init', 'register_technology', 0 );
+add_action('init', 'insert_category_term', 0);
+add_action('init', 'insert_technology_term', 0);
 add_image_size('realisation', 300, 225, false);
 
- ?>
+?>
