@@ -1,4 +1,10 @@
+<?php acf_form_head(); ?>
 <?php get_header(); ?>
+
+
+
+
+
 
 <h2>Formulaire de test pour ajout réalisation</h2>
 <?php
@@ -14,7 +20,7 @@ acf_form(array(
 	'form_attributes' => array(
 		'id' => 'form_realisation',
 		'class' => '',
-		'action' => '/portfolio/ajouter',
+		'action' => '',
 		'method' => 'POST',
 		'name' => 'form_realisation'
 		),

@@ -94,15 +94,15 @@ function insert_category_term(){
 		}
 	}
 
-	wp_insert_term('2010', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2011', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2012', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2013', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2014', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2015', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2016', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2017', 'category', array('parent' => $promotion->term_id));
-	wp_insert_term('2018', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2010', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2011', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2012', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2013', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2014', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2015', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2016', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2017', 'category', array('parent' => $promotion->term_id));
+	wp_insert_term('Promotion 2018', 'category', array('parent' => $promotion->term_id));
 	wp_insert_term(date('Y', strtotime('+5 year')), 'category', array('parent' => $promotion->term_id));
 
 	wp_insert_term('H1', 'category', array('parent' => $annee->term_id));
@@ -137,6 +137,7 @@ add_action( 'init', 'register_realisation', 0 );
 add_action( 'init', 'register_technology', 0 );
 add_action('init', 'insert_category_term', 0);
 add_action('init', 'insert_technology_term', 0);
-add_image_size('realisation', 300, 225, false);
+
+add_image_size('thumb_realisation', 236, 156, false);
 
 ?>

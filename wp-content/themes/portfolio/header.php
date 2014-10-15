@@ -9,31 +9,34 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+	<div id="page">
+		<header class="header-top">
+			<nav id="navigation" class="nav-top">
+				<div class="container">
+					<div class="logo">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<ul>
-				<li><a href="<?php echo get_post_type_archive_link('realisation'); ?>">Réalisations</a></li>
-				<li><a href="/portfolio/register">S'inscrire</a></li>
-			</ul>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+					</div>
+					<div class="nav">
+						<ul>
+							<li>Tag</li>
+							<li>Promotion</li>
+							<li>Ajouter une réalisation</li>
+							<li>Inscription</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-	<div id="content" class="site-content">
+	<div class="container">

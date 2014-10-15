@@ -1,0 +1,46 @@
+#page{
+	width: 100%;
+}
+
+.container{
+	height: auto;
+	width: 945px;
+	margin: auto;
+}
+
+header.header-top{
+	height: 232px;
+	background-color: #4fb96f;
+}
+
+nav.nav-top{
+	height: 71px;
+	background-color: #fff;
+	border-top: solid 6px #4fb96f;
+	.logo{
+		width: 240px;
+		height: 71px;
+		float: left;
+	}
+	.nav{
+		float: left;
+		height: 71px;
+	}
+}
+
+.list-realisation{
+
+	.block-realisation{
+		float: left;
+		width: 236px;
+		height: 156px;
+		a{ text-decoration: none; }
+		img{
+			width: 236px;
+			height: 156px;
+			&:hover{
+
+			}
+		}
+	}
+}

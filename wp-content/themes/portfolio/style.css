@@ -11,19 +11,111 @@ Text Domain: twentythirteen
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url(home.css);
-/* line 2, sass/realisation.scss */
-.content-header .bloc-gauche {
-  width: 500px;
+/* line 1, sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 35, sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, sass/_home.scss */
+#page {
+  width: 100%;
+}
+
+/* line 5, sass/_home.scss */
+.container {
+  height: auto;
+  width: 945px;
+  margin: auto;
+}
+
+/* line 11, sass/_home.scss */
+header.header-top {
+  height: 232px;
+  background-color: #4fb96f;
+}
+
+/* line 16, sass/_home.scss */
+nav.nav-top {
+  height: 71px;
+  background-color: #fff;
+  border-top: solid 6px #4fb96f;
+}
+/* line 20, sass/_home.scss */
+nav.nav-top .logo {
+  width: 240px;
+  height: 71px;
   float: left;
 }
-/* line 7, sass/realisation.scss */
-.content-header .main-img:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=500px);
-  opacity: 5px;
-}
-/* line 9, sass/realisation.scss */
-.content-header .bloc-droite {
+/* line 25, sass/_home.scss */
+nav.nav-top .nav {
   float: left;
-  width: 500px;
+  height: 71px;
+}
+
+/* line 33, sass/_home.scss */
+.list-realisation .block-realisation {
+  float: left;
+  width: 236px;
+  height: 156px;
+}
+/* line 37, sass/_home.scss */
+.list-realisation .block-realisation a {
+  text-decoration: none;
+}
+/* line 38, sass/_home.scss */
+.list-realisation .block-realisation img {
+  width: 236px;
+  height: 156px;
 }
