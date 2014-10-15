@@ -48,7 +48,8 @@ add_filter( 'registration_errors', 'registration_errors_custom', 10, 3 );
 
 function user_register_custom( $user_id ) {
     if ( isset( $_POST['password'] ) ) {
-        update_user_meta( $user_id, 'password', trim( $_POST['password'] ) );
+        // Pour sauvegarder les données utilisateurs --> update_user_meta( $user_id, 'password', trim( $_POST['password'] ) );
+		wp_set_password( $_POST['password'], $user_id );
     }
 }
 add_action( 'user_register', 'user_register_custom' );
