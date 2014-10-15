@@ -22,8 +22,9 @@ function register_realisation() {
 		'label'               => 'realisation',
 		'description'         => 'Réalisation des etudiants',
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', ),
+		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'tag'),
 		'hierarchical'        => false,
+		'taxonomies' => array( 'category'),
 		'public'              => true,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
@@ -41,19 +42,18 @@ function register_realisation() {
 }
 
 // Register Custom Taxonomy
-function register_matiere() {
-
+function register_technology() {
 	$labels = array(
-		'name'                       => _x( 'Matières', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Matière', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Matières', 'text_domain' ),
-		'all_items'                  => __( 'Toutes les matières', 'text_domain' ),
+		'name'                       => _x( 'Technologies', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Technologie', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Technologies', 'text_domain' ),
+		'all_items'                  => __( 'Toutes les Technologies', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'Ajouter matière', 'text_domain' ),
-		'add_new_item'               => __( 'Ajouter une nouvelle matière', 'text_domain' ),
-		'edit_item'                  => __( 'Editer une matière', 'text_domain' ),
-		'update_item'                => __( 'Mettre à jour une matière', 'text_domain' ),
+		'new_item_name'              => __( 'Ajouter Technologie', 'text_domain' ),
+		'add_new_item'               => __( 'Ajouter une nouvelle Technologie', 'text_domain' ),
+		'edit_item'                  => __( 'Editer une Technologie', 'text_domain' ),
+		'update_item'                => __( 'Mettre à jour une Technologie', 'text_domain' ),
 		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
 		'search_items'               => __( 'Search Items', 'text_domain' ),
 		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
@@ -75,7 +75,7 @@ function register_matiere() {
 		'show_tagcloud'              => true,
 		'rewrite'                    => $rewrite,
 	);
-	register_taxonomy( 'matiere', array( 'realisation' ), $args );
+	register_taxonomy( 'technologie', array( 'realisation' ), $args );
 
 }
 
@@ -83,7 +83,7 @@ function register_matiere() {
 // Hook into the 'init' action
 add_action( 'init', 'register_realisation', 0 );
 // Hook into the 'init' action
-add_action( 'init', 'register_matiere', 0 );
+add_action( 'init', 'register_technology', 0 );
 add_image_size('realisation', 300, 225, false);
 
  ?>

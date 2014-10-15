@@ -31,6 +31,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<ul>
 				<li><a href="<?php echo get_post_type_archive_link('realisation'); ?>">Réalisations</a></li>
+				<li><a href="/portfolio/register">S'inscrire</a></li>
 			</ul>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

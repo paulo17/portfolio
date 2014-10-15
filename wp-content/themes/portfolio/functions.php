@@ -48,7 +48,7 @@ add_action( 'after_setup_theme', 'portfolio_setup' );
 add_action('send_headers', 'custom_route');
 
 function custom_route(){
-	// var_dump($_SERVER);
+	//require_once 'register.php';
 }
 
 /**

@@ -35,7 +35,9 @@ function register_role() {
 		'show_tagcloud'              => true,
 		'rewrite'                    => $rewrite,
 	);
-	register_taxonomy( 'role', array( 'user' ), $args );
+	register_taxonomy('role', array('user'), $args);
+
+	wp_insert_term('Developpeur', 'role');
 
 }
 

@@ -11,6 +11,7 @@
 <?php if ($realisations->have_posts()): ?>
 	<?php while ($realisations->have_posts()) : $realisations->the_post(); ?>
 		<h4><?php the_title(); ?></h4>
+		<?php var_dump($post); ?>
 	<?php endwhile; ?>
 <?php endif ?>
 
