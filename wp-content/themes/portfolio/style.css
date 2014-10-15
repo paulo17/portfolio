@@ -11,3 +11,19 @@ Text Domain: twentythirteen
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+@import url(home.css);
+/* line 2, sass/realisation.scss */
+.content-header .bloc-gauche {
+  width: 500px;
+  float: left;
+}
+/* line 7, sass/realisation.scss */
+.content-header .main-img:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=500px);
+  opacity: 5px;
+}
+/* line 9, sass/realisation.scss */
+.content-header .bloc-droite {
+  float: left;
+  width: 500px;
+}

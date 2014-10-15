@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php var_dump($post); ?>
+
 <h1><?php the_title(); ?></h1>
 
 <div class="main-image">
@@ -27,12 +29,5 @@
 	<?php endforeach; ?>
 </div>
 
-<div class="contributor">
-	<ul>
-	<?php foreach ($contributors = get_field('contributeurs', $post->ID) as $key => $contributeur): ?>
-		<li><?php var_dump($contributeur); ?></li>
-	<?php endforeach ?>
-	</ul>
-</div>
 
 <?php get_footer(); ?>

@@ -1,0 +1,13 @@
+.content-header{
+	.bloc-gauche{
+		width: 500px;
+		float: left;
+	}
+	.main-img{
+		&:hover{ @include opacity(5px); }
+	}
+	.bloc-droite{
+		float: left;
+		width: 500px;
+	}
+}
