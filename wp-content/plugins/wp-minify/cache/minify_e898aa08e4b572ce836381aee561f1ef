@@ -104,7 +104,8 @@ solid #ffa500}div.wpcf7-validation-errors{border:2px
 solid #f7e700}span.wpcf7-form-control-wrap{position:relative}span.wpcf7-not-valid-tip{color:#f00;font-size:1em;display:block}.use-floating-validation-tip span.wpcf7-not-valid-tip{position:absolute;top:20%;left:20%;z-index:100;border:1px
 solid #f00;background:#fff;padding: .2em .8em}span.wpcf7-list-item{margin-left:0.5em}.wpcf7-display-none{display:none}div.wpcf7 img.ajax-loader{border:none;vertical-align:middle;margin-left:4px}div.wpcf7 div.ajax-error{display:none}div.wpcf7
 .placeheld{color:#888}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}#page{width:100%}.container{height:auto;width:1170px;margin:auto}header.header-top{height:232px;background-color:#4fb96f}nav.nav-top{height:71px;background-color:#fff;border-top:solid 6px #4fb96f}nav.nav-top
-.logo{width:240px;height:71px;float:left}nav.nav-top
+.logo{width:200px;height:71px;line-height:71px;float:left}nav.nav-top .logo
+img{margin-top:8px;height:45px;width:180px}nav.nav-top
 .nav{float:left;height:71px}nav.nav-top
 ul.menu{height:71px;line-height:71px}nav.nav-top ul.menu
 li{display:inline-block;padding-left:15px;padding-left:15px}nav.nav-top ul.menu

@@ -94,27 +94,57 @@ nav.nav-top {
 }
 /* line 22, sass/_home.scss */
 nav.nav-top .logo {
-  width: 240px;
+  width: 200px;
   height: 71px;
+  line-height: 71px;
   float: left;
 }
 /* line 27, sass/_home.scss */
-nav.nav-top .nav {
-  float: left;
-  height: 71px;
+nav.nav-top .logo img {
+  margin-top: 8px;
+  height: 45px;
+  width: 180px;
 }
 /* line 31, sass/_home.scss */
+nav.nav-top .logo img:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 34, sass/_home.scss */
+nav.nav-top .nav {
+  float: right;
+  height: 71px;
+}
+/* line 37, sass/_home.scss */
+nav.nav-top .nav .menu-navigation-container {
+  float: left;
+}
+/* line 38, sass/_home.scss */
+nav.nav-top .nav .search {
+  height: 71px;
+  width: 50px;
+  line-height: 71px;
+  float: left;
+  padding-top: 5px;
+  margin-left: 25px;
+}
+/* line 45, sass/_home.scss */
+nav.nav-top .nav .search i {
+  font-size: 30px;
+  color: #4fb96f;
+}
+/* line 48, sass/_home.scss */
 nav.nav-top ul.menu {
   height: 71px;
   line-height: 71px;
 }
-/* line 34, sass/_home.scss */
+/* line 51, sass/_home.scss */
 nav.nav-top ul.menu li {
   display: inline-block;
   padding-left: 15px;
   padding-left: 15px;
 }
-/* line 39, sass/_home.scss */
+/* line 56, sass/_home.scss */
 nav.nav-top ul.menu a {
   text-decoration: none;
   text-transform: uppercase;
@@ -123,24 +153,24 @@ nav.nav-top ul.menu a {
   font-weight: bold;
   font-size: 20px;
 }
-/* line 46, sass/_home.scss */
+/* line 63, sass/_home.scss */
 nav.nav-top ul.menu a:hover {
   box-sizing: border-box;
   padding-bottom: 5px;
   border-bottom: solid 3px #4fb96f;
 }
 
-/* line 57, sass/_home.scss */
+/* line 74, sass/_home.scss */
 .list-realisation .block-realisation {
   float: left;
   width: 236px;
   height: 156px;
 }
-/* line 61, sass/_home.scss */
+/* line 78, sass/_home.scss */
 .list-realisation .block-realisation a {
   text-decoration: none;
 }
-/* line 62, sass/_home.scss */
+/* line 79, sass/_home.scss */
 .list-realisation .block-realisation img {
   width: 236px;
   height: 156px;

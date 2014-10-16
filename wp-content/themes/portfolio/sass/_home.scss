@@ -20,13 +20,30 @@ nav.nav-top{
 	background-color: #fff;
 	border-top: solid 6px #4fb96f;
 	.logo{
-		width: 240px;
+		width: 200px;
 		height: 71px;
+		line-height: 71px;
 		float: left;
+		img{
+			margin-top: 8px;
+			height: 45px;
+			width: 180px;
+			&:hover{ @include opacity(0.7); }
+		}
 	}
 	.nav{
-		float: left;
+		float: right;
 		height: 71px;
+		.menu-navigation-container{ float: left; }
+		.search{
+			height: 71px;
+			width: 50px;
+			line-height: 71px;
+			float: left;
+			padding-top: 5px;
+			margin-left: 25px;
+			i{ font-size: 30px; color: $green; }
+		}
 	}
 	ul.menu{
 		height: 71px;

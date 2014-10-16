@@ -108,7 +108,7 @@ solid #f00;background:#fff;padding: .2em .8em}span.wpcf7-list-item{margin-left:0
 .logo{width:240px;height:71px;float:left}nav.nav-top
 .nav{float:left;height:71px}nav.nav-top
 ul.menu{height:71px;line-height:71px}nav.nav-top ul.menu
-li{display:inline-block;padding-left:15px;padding-left:15px}nav.nav-top ul.menu
+li{display:inline-block;padding-left:12px;padding-left:12px}nav.nav-top ul.menu
 a{text-decoration:none;text-transform:uppercase;color:#000;font-family:Lato;font-weight:bold;font-size:20px}nav.nav-top ul.menu a:hover{box-sizing:border-box;padding-bottom:5px;border-bottom:solid 3px #4fb96f}.list-realisation .block-realisation{float:left;width:236px;height:156px}.list-realisation .block-realisation
 a{text-decoration:none}.list-realisation .block-realisation
 img{width:236px;height:156px}

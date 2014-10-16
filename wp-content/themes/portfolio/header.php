@@ -14,7 +14,8 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 
@@ -25,10 +26,15 @@
 			<nav id="navigation" class="nav-top">
 				<div class="container">
 					<div class="logo">
-
+						<a href="<?= home_url(); ?>">
+							<img src="<?= get_template_directory_uri() . '/img/logo.png'; ?>" alt="">
+						</a>
 					</div>
 					<div class="nav">
 						<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+						<div class="search">
+							<i class="fa fa-search"></i>
+						</div>
 					</div>
 				</div>
 			</nav>
