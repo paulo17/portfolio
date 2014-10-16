@@ -68,53 +68,79 @@ table {
   border-spacing: 0;
 }
 
-/* line 1, sass/_home.scss */
+/* line 3, sass/_home.scss */
 #page {
   width: 100%;
 }
 
-/* line 5, sass/_home.scss */
+/* line 7, sass/_home.scss */
 .container {
   height: auto;
-  width: 945px;
+  width: 1170px;
   margin: auto;
 }
 
-/* line 11, sass/_home.scss */
+/* line 13, sass/_home.scss */
 header.header-top {
   height: 232px;
   background-color: #4fb96f;
 }
 
-/* line 16, sass/_home.scss */
+/* line 18, sass/_home.scss */
 nav.nav-top {
   height: 71px;
   background-color: #fff;
   border-top: solid 6px #4fb96f;
 }
-/* line 20, sass/_home.scss */
+/* line 22, sass/_home.scss */
 nav.nav-top .logo {
   width: 240px;
   height: 71px;
   float: left;
 }
-/* line 25, sass/_home.scss */
+/* line 27, sass/_home.scss */
 nav.nav-top .nav {
   float: left;
   height: 71px;
 }
+/* line 31, sass/_home.scss */
+nav.nav-top ul.menu {
+  height: 71px;
+  line-height: 71px;
+}
+/* line 34, sass/_home.scss */
+nav.nav-top ul.menu li {
+  display: inline-block;
+  padding-left: 15px;
+  padding-left: 15px;
+}
+/* line 39, sass/_home.scss */
+nav.nav-top ul.menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 46, sass/_home.scss */
+nav.nav-top ul.menu a:hover {
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  border-bottom: solid 3px #4fb96f;
+}
 
-/* line 33, sass/_home.scss */
+/* line 57, sass/_home.scss */
 .list-realisation .block-realisation {
   float: left;
   width: 236px;
   height: 156px;
 }
-/* line 37, sass/_home.scss */
+/* line 61, sass/_home.scss */
 .list-realisation .block-realisation a {
   text-decoration: none;
 }
-/* line 38, sass/_home.scss */
+/* line 62, sass/_home.scss */
 .list-realisation .block-realisation img {
   width: 236px;
   height: 156px;

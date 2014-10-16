@@ -76,6 +76,17 @@ function custom_acf_deregister_styles(){
 		wp_deregister_style( 'wp-admin' );
 	}
 }
-add_action( 'wp_print_styles', 'custom_acf_deregister_styles', 1 );
+add_action( 'wp_print_styles', 'custom_acf_deregister_styles', 999 );
 
 
+/*
+*  Create an advanced sub page called 'Footer' that sits under the General options menu
+*/
+
+if( function_exists('acf_add_options_sub_page') ){
+	acf_add_options_sub_page(array(
+		'title' => 'Options',
+		'parent' => 'options-general.php',
+		'capability' => 'manage_options'
+		));
+}
