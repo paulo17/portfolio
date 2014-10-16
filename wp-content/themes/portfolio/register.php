@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Formulaire Inscription
+*/
+ ?>
 <?php get_header(); ?>
 
 <form action="" method="POST">
