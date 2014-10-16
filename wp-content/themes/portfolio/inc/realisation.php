@@ -225,5 +225,6 @@ add_action( 'init', 'register_technology', 0 );
 
 
 add_image_size('thumb_realisation_home', 294, 195, false);
+add_image_size('thumb_realisation_list', 292, 192, false);
 
 ?>

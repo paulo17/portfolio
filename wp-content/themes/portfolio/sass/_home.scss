@@ -35,14 +35,15 @@ nav.nav-top{
 	.nav{
 		float: right;
 		height: 71px;
+		margin-right: 25px;
 		.menu-navigation-container{ float: left; }
 		.search{
 			height: 71px;
-			width: 50px;
+			width: 30px;
 			line-height: 71px;
-			float: left;
+			float: right;
 			padding-top: 5px;
-			margin-left: 25px;
+			margin-left: 10px;
 			i{ font-size: 30px; color: $green; }
 		}
 	}
@@ -77,7 +78,7 @@ nav.nav-top{
 	}
 }
 
-.list-realisation{
+.list-home-realisation{
 	width: 1014px;
 	min-height: 500px;
 	margin: auto;
@@ -94,6 +95,36 @@ nav.nav-top{
 
 			}
 		}
+	}
+}
+
+.list-realisation{
+	width: 1170px;
+	min-height: 500px;
+	.block-realisation{
+		float: left;
+		width: 292px;
+		height: 195px;
+		a{ text-decoration: none; position: absolute;}
+		img{
+			width: 292px;
+			height: 195px;
+		}
+		&:hover{
+			img{ @include filter(contrast(30%)) };
+			.info-realisation{ display: block; }
+		}
+	}
+	.info-realisation{
+		text-align: center;
+		font-family: Lato;
+		font-weight: bold;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #fff;
+		display: none;
+		position: relative;
+		top: 75px;
 	}
 }
 

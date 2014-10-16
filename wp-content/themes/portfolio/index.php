@@ -2,7 +2,7 @@
 
 <?php $realisations = new WP_Query(array('post_type' => 'realisation')); ?>
 
-<div class="list-realisation">
+<div class="list-home-realisation">
 
 <?php if ( $realisations->have_posts() ) : while ( $realisations->have_posts() ) : $realisations->the_post(); ?>
 	<div class="block-realisation">
