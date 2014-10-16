@@ -10,6 +10,9 @@
 
 	</div>
 	<!-- div.container -->
+	<footer class="footer-bottom">
+
+	</footer>
 </div>
 <!-- div#page -->
 
