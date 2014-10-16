@@ -72,10 +72,10 @@ add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
 
 
 function custom_acf_deregister_styles(){
-	if (! is_admin() ){
+	if (!is_admin()){
 		wp_deregister_style( 'wp-admin' );
 	}
 }
-add_action( 'wp_print_styles', 'custom_acf_deregister_styles', 100 );
+add_action( 'wp_print_styles', 'custom_acf_deregister_styles', 1 );
 
 

@@ -129,8 +129,6 @@ function insert_technology_term(){
 }
 
 
-
-
 // Hook into the 'init' action
 add_action( 'init', 'register_realisation', 0 );
 // Hook into the 'init' action
