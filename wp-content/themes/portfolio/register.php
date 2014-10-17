@@ -71,10 +71,12 @@ Template Name: Formulaire Inscription
 		<form action="" method="POST">
 
 			<label for="identifiant">Identifiant</label>
-			<input type="text" name="identifiant" id="identifiant">
+			<input type="text" name="identifiant" id="identifiant" 
+				<?php if(isset($_POST['identifiant'])) echo 'value="'.$_POST['identifiant'].'"';?> >
 			
 			<label for="email">Adresse email</label>
-			<input type="email" name="email" id="email">
+			<input type="email" name="email" id="email"
+				<?php if(isset($_POST['email'])) echo 'value="'.$_POST['email'].'"';?> >
 
 			<label for="password">Mot de passe</label>
 			<input type="password" name="password" id="password">
