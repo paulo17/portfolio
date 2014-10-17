@@ -38,6 +38,9 @@
 					</div>
 				</div>
 			</nav>
+			<div class="intro">
+				<span><?= get_field('introduction', 'options'); ?></span>
+			</div>
 		</header>
 
 	<div class="container">

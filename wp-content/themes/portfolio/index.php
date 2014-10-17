@@ -4,18 +4,18 @@
 
 <div class="list-home-realisation">
 
-<?php if ( $realisations->have_posts() ) : while ( $realisations->have_posts() ) : $realisations->the_post(); ?>
-	<div class="block-realisation">
+	<?php if ( $realisations->have_posts() ) : while ( $realisations->have_posts() ) : $realisations->the_post(); ?>
 		<a href="<?php the_permalink() ?>">
-			<!-- <img src="http://lorempixel.com/236/156" alt=""> -->
-			<?php the_post_thumbnail('thumb_realisation_home'); ?>
+			<div class="block-realisation">
+				<?php the_post_thumbnail('thumb_realisation_home'); ?>
+				<div class="info-realisation">
+					<span class="name"><?php the_title(); ?></span>
+					<span class="promotion"></span>
+				</div>
+
+			</div>
 		</a>
-		<div class="info-realisation">
-			<span class="name"><?php the_title(); ?></span>
-			<span class="promotion"></span>
-		</div>
-	</div>
-<?php endwhile; else: ?>
+	<?php endwhile; else: ?>
 
 <?php endif; ?>
 
