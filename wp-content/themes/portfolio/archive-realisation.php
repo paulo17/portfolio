@@ -12,13 +12,15 @@ Template Name: Liste des réalisations
 	<?php if ( $realisations->have_posts() ) : while ( $realisations->have_posts() ) : $realisations->the_post(); ?>
 		<a href="<?php the_permalink() ?>">
 			<div class="block-realisation">
-				<?php the_post_thumbnail('thumb_realisation_list'); ?>
+				<?php if (!empty(get_field('image_principal', $post->ID))): ?>
+					<img src="<?php the_field('image_principal'); ?>" alt="">
+				<?php endif; ?>
 				<div class="info-realisation">
 					<span class="name"><?php the_title(); ?></span>
 					<span class="promotion">
 						<?php
 							$term = get_term( get_field('promotion', $post->ID), 'promotion');
-							echo 'Promotion ' . $term->name;
+							if(!empty($term->name)){ echo 'Promotion ' . $term->name; }
 						 ?>
 					</span>
 				</div>

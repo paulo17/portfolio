@@ -11,7 +11,7 @@
 	</div>
 	<!-- div.container -->
 	<footer class="footer-bottom">
-
+		<div class="container"></div>
 	</footer>
 </div>
 <!-- div#page -->

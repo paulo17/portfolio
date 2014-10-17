@@ -8,6 +8,9 @@
 		<a href="<?php the_permalink() ?>">
 			<div class="block-realisation">
 				<?php the_post_thumbnail('thumb_realisation_home'); ?>
+				<?php if (!empty(get_field('image_principal', $post->ID))): ?>
+					<img src="<?php the_field('image_principal'); ?>" alt="">
+				<?php endif ?>
 				<div class="info-realisation">
 					<span class="name"><?php the_title(); ?></span>
 					<span class="promotion"></span>

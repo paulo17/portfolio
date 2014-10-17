@@ -7,8 +7,11 @@ Template Name: Formulaire Realisation
 <?php acf_form_head(); ?>
 <?php get_header(); ?>
 
+<div class="form-realisation">
+<h2>Ajouter un projet</h2>
 
-<h2>Ajouter une réalisation</h2>
+
+
 <?php
 
 acf_form(array(
@@ -35,4 +38,5 @@ acf_form(array(
 
 ?>
 
+</div>
 <?php get_footer(); ?>
