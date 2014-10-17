@@ -1,0 +1,67 @@
+.form-register{
+	min-height: 845px;
+	background-color: #fafafa;
+	border-left: 2px solid #e6e6e6;
+	border-right: 2px solid #e6e6e6;
+	
+	.erreurs
+	{
+		margin-top: 0px;
+		color: red;
+		font-family: Lato;
+		margin: 0px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	
+	h2{
+		margin: 0px;
+		text-align: center;
+		padding-top: 50px;
+		padding-bottom: 10px;
+		font-family: Lato;
+		font-weight: 700;
+		font-size: 48px;
+		color: #494949;
+	}
+	
+	.center-form
+	{
+		margin: auto;
+		width: 1000px;
+	}
+	
+	label
+	{
+		line-height: 58px;
+		display: block;
+		float: left;
+		width: 192px;
+		text-align:right;
+		font-family: Lato;
+		font-weight: 700;
+		font-size: 30px;
+		padding-right: 27px;
+	}
+	
+	
+	input, select
+	{
+		border: 2px solid black;
+		width: 680px;
+		height: 58px;
+		float: left;
+		margin-bottom: 32px;
+	}
+	
+	select
+	{
+		width: 688px;
+	}
+	
+	input[type=submit]
+	{
+		width: 340px;
+		float: right;
+	}
+}

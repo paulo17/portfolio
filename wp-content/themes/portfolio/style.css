@@ -283,3 +283,65 @@ nav.nav-top ul.menu a:hover {
   height: 300px;
   background: #9f9d9d url("img/footer.jpg") center no-repeat;
 }
+
+/* line 1, sass/_register.scss */
+.form-register {
+  min-height: 845px;
+  background-color: #fafafa;
+  border-left: 2px solid #e6e6e6;
+  border-right: 2px solid #e6e6e6;
+}
+/* line 7, sass/_register.scss */
+.form-register .erreurs {
+  margin-top: 0px;
+  color: red;
+  font-family: Lato;
+  margin: 0px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* line 17, sass/_register.scss */
+.form-register h2 {
+  margin: 0px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 48px;
+  color: #494949;
+}
+/* line 28, sass/_register.scss */
+.form-register .center-form {
+  margin: auto;
+  width: 1000px;
+}
+/* line 34, sass/_register.scss */
+.form-register label {
+  line-height: 58px;
+  display: block;
+  float: left;
+  width: 192px;
+  text-align: right;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 30px;
+  padding-right: 27px;
+}
+/* line 48, sass/_register.scss */
+.form-register input, .form-register select {
+  border: 2px solid black;
+  width: 680px;
+  height: 58px;
+  float: left;
+  margin-bottom: 32px;
+}
+/* line 57, sass/_register.scss */
+.form-register select {
+  width: 688px;
+}
+/* line 62, sass/_register.scss */
+.form-register input[type=submit] {
+  width: 340px;
+  float: right;
+}
