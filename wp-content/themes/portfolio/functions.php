@@ -22,7 +22,11 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'html5', array(
-			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
 			) );
 		add_theme_support( 'post-formats', array(
 			'aside', 'image', 'video', 'quote', 'link',
@@ -30,6 +34,7 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'portfolio' ),
+			'footer' => __( 'Footer Menu', 'portfolio' ),
 			) );
 
 	}
@@ -65,11 +70,13 @@ add_action('acf/save_post', 'insert_realisation');
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
+	wp_register_script( 'infinite-scroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', 'jquery', '2.0', true );
+	wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', 'jquery', '2.0', true );
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'infinite-scroll' );
+	wp_enqueue_script( 'script' );
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
-
-
 
 function custom_acf_deregister_styles(){
 	if (!is_admin()){
@@ -80,7 +87,7 @@ add_action( 'wp_print_styles', 'custom_acf_deregister_styles', 999 );
 
 
 /*
-*  Create an advanced sub page called 'Footer' that sits under the General options menu
+*  Create an advanced sub page called 'Options' that sits under the General options menu
 */
 
 if( function_exists('acf_add_options_sub_page') ){
@@ -90,3 +97,13 @@ if( function_exists('acf_add_options_sub_page') ){
 		'capability' => 'manage_options'
 		));
 }
+
+function my_search_form( $form ) {
+	$form = '<form role="search" method="post" action="' . home_url( '/' ) . '" >
+	<div><input type="text" value="' . get_search_query() . '" name="s" id="s" /></div>
+	</form>';
+
+	return $form;
+}
+
+add_filter( 'get_search_form', 'my_search_form' );

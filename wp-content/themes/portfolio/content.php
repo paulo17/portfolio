@@ -4,35 +4,23 @@
  */
 ?>
 
+<!-- realisation -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php portfolio_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'portfolio' ), 
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'portfolio' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php portfolio_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+	<a href="<?php the_permalink() ?>">
+		<div class="block-realisation">
+			<?php if (!empty(get_field('image_principal', $post->ID))): ?>
+				<img src="<?php the_field('image_principal'); ?>" alt="">
+			<?php endif; ?>
+			<div class="info-realisation">
+				<span class="name"><?php the_title(); ?></span>
+				<span class="promotion">
+					<?php
+					$term = get_term( get_field('promotion', $post->ID), 'promotion');
+					if(!empty($term->name)){ echo 'Promotion ' . $term->name; }
+					?>
+				</span>
+			</div>
+		</div>
+	</a>
+</article>
+<!-- realisation -->

@@ -32,15 +32,19 @@
 					</div>
 					<div class="nav">
 						<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
-						<div class="search">
+						<div id="search" class="search">
 							<i class="fa fa-search"></i>
+						</div>
+						<div id="search-form" class="search-form">
+							<?php get_search_form(); ?>
 						</div>
 					</div>
 				</div>
 			</nav>
 			<div class="intro">
 				<span><?= get_field('introduction', 'options'); ?></span>
+				<?php //get_search_form(); ?>
 			</div>
 		</header>
 
-	<div class="container">
+	<div id="container" class="container">
