@@ -7,6 +7,7 @@
 require get_template_directory() . '/inc/realisation.php';
 require get_template_directory() . '/inc/user.php';
 require get_template_directory() . '/inc/custom-register.php';
+require get_template_directory() . '/inc/template-tags.php';
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 980; /* pixels */
