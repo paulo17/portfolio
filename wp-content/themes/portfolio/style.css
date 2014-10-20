@@ -385,17 +385,18 @@ nav.nav-top ul.menu a:hover {
 }
 /* line 48, sass/_register.scss */
 .form-register input, .form-register select {
+  font-size: 25px;
   border: 2px solid black;
   width: 680px;
   height: 58px;
   float: left;
   margin-bottom: 32px;
 }
-/* line 57, sass/_register.scss */
+/* line 58, sass/_register.scss */
 .form-register select {
   width: 688px;
 }
-/* line 62, sass/_register.scss */
+/* line 63, sass/_register.scss */
 .form-register input[type=submit] {
   width: 340px;
   float: right;
