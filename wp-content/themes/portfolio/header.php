@@ -9,31 +9,43 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-<?php wp_head(); ?>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+	<div id="page">
+		<header class="header-top">
+			<nav id="navigation" class="nav-top">
+				<div class="container">
+					<div class="logo">
+						<a href="<?= home_url(); ?>">
+							<img src="<?= get_template_directory_uri() . '/img/logo.png'; ?>" alt="">
+						</a>
+					</div>
+					<div class="nav">
+						<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+						<div class="search">
+							<i id="search" class="fa fa-search"></i>
+							<div id="search-form" class="search-form">
+								<?php get_search_form(); ?>
+							</div>
+						</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<ul>
-				<li><a href="<?php echo get_post_type_archive_link('realisation'); ?>">Réalisations</a></li>
-				<li><a href="/portfolio/register">S'inscrire</a></li>
-			</ul>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+					</div>
+				</div>
+			</nav>
+			<div class="intro">
+				<span><?= get_field('introduction', 'options'); ?></span>
+				<?php //get_search_form(); ?>
+			</div>
+		</header>
 
-	<div id="content" class="site-content">
+	<div id="container" class="container">

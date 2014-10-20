@@ -38,6 +38,14 @@ function register_role() {
 	register_taxonomy('role', array('user'), $args);
 
 	wp_insert_term('Developpeur', 'role');
+	wp_insert_term('Designer', 'role');
+	wp_insert_term('Chef de projet', 'role');
+	wp_insert_term('Integrateur', 'role');
+	wp_insert_term('Responsable Technique', 'role');
+	wp_insert_term('Responsable Marketing', 'role');
+	wp_insert_term('Responsable SEO', 'role');
+	wp_insert_term('Administrateur système', 'role');
+	wp_insert_term('Administrateur base de données', 'role');
 
 }
 

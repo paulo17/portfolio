@@ -1,6 +1,15 @@
+<?php
+/*
+Template Name: Formulaire Realisation
+*/
+?>
+
+<?php acf_form_head(); ?>
 <?php get_header(); ?>
 
-<h2>Formulaire de test pour ajout réalisation</h2>
+<div class="form-realisation">
+<h2>Ajouter un projet</h2>
+
 <?php
 
 acf_form(array(
@@ -14,7 +23,7 @@ acf_form(array(
 	'form_attributes' => array(
 		'id' => 'form_realisation',
 		'class' => '',
-		'action' => '#',
+		'action' => '',
 		'method' => 'POST',
 		'name' => 'form_realisation'
 		),
@@ -27,4 +36,5 @@ acf_form(array(
 
 ?>
 
+</div>
 <?php get_footer(); ?>
