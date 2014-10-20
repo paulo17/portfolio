@@ -81,3 +81,13 @@ function portfolio_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
+
+
+function add_image_sizes()
+{
+     if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'single-size', 518, 360, true ); // single project image
+     }
+}
+add_action('after_setup_theme', 'add_image_sizes');
+
