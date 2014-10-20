@@ -29,14 +29,24 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 			'gallery',
 			'caption',
 			) );
+
 		add_theme_support( 'post-formats', array(
 			'aside', 'image', 'video', 'quote', 'link',
 			) );
+
+		/*add_theme_support('infinite-scroll', array(
+			'type' => 'scroll',
+			'container' => 'container-realisation',
+			'render' => get_template_part('content', 'archive-realisation'),
+			'footer' => false,
+			'posts_per_page' => 5
+		) );*/
 
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'portfolio' ),
 			'footer' => __( 'Footer Menu', 'portfolio' ),
 			) );
+
 
 	}
 
@@ -110,3 +120,4 @@ function my_search_form( $form ) {
 }
 
 add_filter( 'get_search_form', 'my_search_form' );
+

@@ -6,8 +6,9 @@ $green: #4fb96f;
 
 .container{
 	height: auto;
+	min-height: 100%;
 	width: 1170px;
-	margin: auto;
+	margin: 0 auto;
 }
 
 header.header-top{
@@ -164,15 +165,15 @@ nav.nav-top{
 }
 
 .form-realisation{
-	form{
-		width: 1000px;
-		height: 1000px;
-		margin: auto;
-	}
-	min-height: 500px;
+	height: auto;
 	background-color: #fafafa;
 	border-left: 2px solid #e6e6e6;
 	border-right: 2px solid #e6e6e6;
+	form{
+		width: 1000px;
+		height: auto;
+		margin: auto;
+	}
 	h2{
 		width: 400px;
 		margin: auto;

@@ -12,12 +12,13 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $realisations = new WP_Query(array(
 	'post_type' => 'realisation',
-	'posts_per_page' => 12,
+	'posts_per_page' => 5,
 	'paged' => $paged
 	));
+apply_filters(  'infinite_scroll_query_object', $realisations  );
 ?>
 
-<div class="list-realisation">
+<div id="container-realisation" class="list-realisation">
 	<?php if ( $realisations->have_posts() ) : while ( $realisations->have_posts() ) : $realisations->the_post(); ?>
 		<?php get_template_part('content', get_post_format()); ?>
 	<?php endwhile; else: ?>
