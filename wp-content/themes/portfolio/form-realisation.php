@@ -10,8 +10,6 @@ Template Name: Formulaire Realisation
 <div class="form-realisation">
 <h2>Ajouter un projet</h2>
 
-
-
 <?php
 
 acf_form(array(
