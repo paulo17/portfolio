@@ -82,10 +82,11 @@ table {
 
 /* line 13, sass/_home.scss */
 header.header-top {
+  width: auto;
   height: 232px;
   background-color: #4fb96f;
 }
-/* line 16, sass/_home.scss */
+/* line 17, sass/_home.scss */
 header.header-top .intro {
   text-align: center;
   font-family: Lato;
@@ -93,15 +94,16 @@ header.header-top .intro {
   font-size: 35px;
   color: #fff;
   line-height: 155px;
+  background-color: #4fb96f;
 }
 
-/* line 26, sass/_home.scss */
+/* line 28, sass/_home.scss */
 nav.nav-top {
   height: 71px;
   background-color: #fff;
   border-top: solid 6px #4fb96f;
 }
-/* line 30, sass/_home.scss */
+/* line 32, sass/_home.scss */
 nav.nav-top .logo {
   width: 200px;
   height: 71px;
@@ -109,28 +111,28 @@ nav.nav-top .logo {
   float: left;
   margin-left: 68px;
 }
-/* line 36, sass/_home.scss */
+/* line 38, sass/_home.scss */
 nav.nav-top .logo img {
   margin-top: 8px;
   height: 45px;
   width: 180px;
 }
-/* line 40, sass/_home.scss */
+/* line 42, sass/_home.scss */
 nav.nav-top .logo img:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 43, sass/_home.scss */
+/* line 45, sass/_home.scss */
 nav.nav-top .nav {
   float: right;
   height: 71px;
   margin-right: 25px;
 }
-/* line 47, sass/_home.scss */
+/* line 49, sass/_home.scss */
 nav.nav-top .nav .menu-navigation-container {
   float: left;
 }
-/* line 48, sass/_home.scss */
+/* line 50, sass/_home.scss */
 nav.nav-top .nav .search {
   height: 71px;
   width: 30px;
@@ -138,30 +140,50 @@ nav.nav-top .nav .search {
   float: right;
   padding-top: 5px;
   margin-left: 10px;
+  position: relative;
 }
-/* line 55, sass/_home.scss */
+/* line 57, sass/_home.scss */
 nav.nav-top .nav .search i {
   font-size: 30px;
   color: #4fb96f;
 }
-/* line 58, sass/_home.scss */
+/* line 57, sass/_home.scss */
+nav.nav-top .nav .search i:hover {
+  cursor: pointer;
+}
+/* line 60, sass/_home.scss */
+nav.nav-top .nav .search-form {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+/* line 67, sass/_home.scss */
+nav.nav-top .nav .search-form input {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+}
+/* line 74, sass/_home.scss */
 nav.nav-top ul.menu {
   height: 71px;
   line-height: 71px;
 }
-/* line 61, sass/_home.scss */
+/* line 77, sass/_home.scss */
 nav.nav-top ul.menu li {
   display: inline-block;
   padding-left: 15px;
   padding-left: 15px;
 }
-/* line 66, sass/_home.scss */
+/* line 82, sass/_home.scss */
 nav.nav-top ul.menu li.current-menu-item a {
   box-sizing: border-box;
   padding-bottom: 5px;
   border-bottom: solid 3px #4fb96f;
 }
-/* line 73, sass/_home.scss */
+/* line 89, sass/_home.scss */
 nav.nav-top ul.menu a {
   text-decoration: none;
   text-transform: uppercase;
@@ -170,49 +192,49 @@ nav.nav-top ul.menu a {
   font-weight: 700;
   font-size: 20px;
 }
-/* line 80, sass/_home.scss */
+/* line 96, sass/_home.scss */
 nav.nav-top ul.menu a:hover {
   box-sizing: border-box;
   padding-bottom: 5px;
   border-bottom: solid 3px #4fb96f;
 }
 
-/* line 89, sass/_home.scss */
+/* line 105, sass/_home.scss */
 .list-home-realisation {
   width: 1014px;
-  min-height: 500px;
+  min-height: 700px;
   margin: auto;
   margin-bottom: 46px;
 }
-/* line 94, sass/_home.scss */
+/* line 110, sass/_home.scss */
 .list-home-realisation a {
   text-decoration: none;
   display: block;
 }
-/* line 98, sass/_home.scss */
+/* line 114, sass/_home.scss */
 .list-home-realisation .block-realisation {
   float: left;
   width: 294px;
   height: 195px;
   margin: 46px 22px 0 22px;
 }
-/* line 103, sass/_home.scss */
+/* line 119, sass/_home.scss */
 .list-home-realisation .block-realisation img {
   width: 294px;
   height: 195px;
 }
 
-/* line 113, sass/_home.scss */
+/* line 129, sass/_home.scss */
 .list-realisation {
   width: 1170px;
-  min-height: 500px;
+  min-height: 700px;
 }
-/* line 116, sass/_home.scss */
+/* line 132, sass/_home.scss */
 .list-realisation a {
   display: block;
   text-decoration: none;
 }
-/* line 120, sass/_home.scss */
+/* line 136, sass/_home.scss */
 .list-realisation .block-realisation {
   float: left;
   width: 292px;
@@ -220,21 +242,21 @@ nav.nav-top ul.menu a:hover {
   position: relative;
   cursor: pointer;
 }
-/* line 126, sass/_home.scss */
+/* line 142, sass/_home.scss */
 .list-realisation .block-realisation img {
   width: 292px;
   height: 195px;
 }
-/* line 131, sass/_home.scss */
+/* line 147, sass/_home.scss */
 .list-realisation .block-realisation:hover img {
   -webkit-filter: contrast(30%);
   filter: contrast(30%);
 }
-/* line 132, sass/_home.scss */
+/* line 148, sass/_home.scss */
 .list-realisation .block-realisation:hover .info-realisation {
   display: block;
 }
-/* line 135, sass/_home.scss */
+/* line 151, sass/_home.scss */
 .list-realisation .info-realisation {
   width: 100%;
   text-align: center;
@@ -248,19 +270,19 @@ nav.nav-top ul.menu a:hover {
   top: 0;
   margin-top: 70px;
 }
-/* line 147, sass/_home.scss */
+/* line 163, sass/_home.scss */
 .list-realisation .info-realisation span {
   display: block;
 }
 
-/* line 151, sass/_home.scss */
+/* line 167, sass/_home.scss */
 .form-realisation {
   min-height: 500px;
   background-color: #fafafa;
   border-left: 2px solid #e6e6e6;
   border-right: 2px solid #e6e6e6;
 }
-/* line 156, sass/_home.scss */
+/* line 172, sass/_home.scss */
 .form-realisation h2 {
   width: 400px;
   margin: auto;
@@ -272,16 +294,49 @@ nav.nav-top ul.menu a:hover {
   color: #494949;
 }
 
-/* line 168, sass/_home.scss */
+/* line 184, sass/_home.scss */
 .footer-bottom {
-  width: 100%;
+  width: auto;
   height: 300px;
   background-color: #9f9d9d;
+  position: relative;
 }
-/* line 172, sass/_home.scss */
+/* line 189, sass/_home.scss */
 .footer-bottom .container {
   height: 300px;
   background: #9f9d9d url("img/footer.jpg") center no-repeat;
+}
+/* line 193, sass/_home.scss */
+.footer-bottom .logo {
+  float: left;
+  width: 200px;
+  padding-top: 225px;
+}
+
+/* line 200, sass/_home.scss */
+.menu-footer-container {
+  padding-top: 260px;
+  width: 400px;
+  margin-left: 525px;
+  float: left;
+}
+/* line 205, sass/_home.scss */
+.menu-footer-container a {
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 20px;
+  color: #494949;
+  text-decoration: none;
+}
+/* line 212, sass/_home.scss */
+.menu-footer-container ul {
+  width: 500px;
+}
+/* line 214, sass/_home.scss */
+.menu-footer-container ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
 }
 
 /* line 1, sass/_register.scss */

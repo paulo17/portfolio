@@ -8,18 +8,18 @@
  */
 ?>
 
-	</div>
-	<!-- div.container -->
-	<footer class="footer-bottom">
-		<div class="container">
-			<nav class="footer">
-				<?php wp_nav_menu(array('theme_location' => 'footer')); ?>
-				<div class="logo">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo-footer.png" height="65" width="200" alt="">
-				</div>
-			</nav>
+</div>
+<!-- div.container -->
+<footer class="footer-bottom">
+	<div class="container">
+		<?php wp_nav_menu(array('theme_location' => 'footer')); ?>
+		<div class="logo">
+			<a href="http://hetic.net/" target="_blank">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo-footer.png" height="65" width="200" alt="">
+			</a>
 		</div>
-	</footer>
+	</div>
+</footer>
 </div>
 <!-- div#page -->
 

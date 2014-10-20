@@ -11,6 +11,7 @@ $green: #4fb96f;
 }
 
 header.header-top{
+	width: auto;
 	height: 232px;
 	background-color: #4fb96f;
 	.intro{
@@ -20,6 +21,7 @@ header.header-top{
 		font-size: 35px;
 		color: #fff;
 		line-height: 155px;
+		background-color: #4fb96f;
 	}
 }
 
@@ -52,7 +54,21 @@ nav.nav-top{
 			float: right;
 			padding-top: 5px;
 			margin-left: 10px;
-			i{ font-size: 30px; color: $green; }
+			i{ font-size: 30px; color: $green; &:hover{ cursor: pointer; }}
+			position: relative;
+		}
+		.search-form{
+			display: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 60px;
+			right: 0;
+			input{
+				height: 30px;
+				width: 300px;
+				font-size: 25px;
+			}
 		}
 	}
 	ul.menu{
@@ -112,7 +128,7 @@ nav.nav-top{
 
 .list-realisation{
 	width: 1170px;
-	min-height: 500px;
+	min-height: 700px;
 	a{
 		display: block;
 		text-decoration: none;
@@ -166,11 +182,39 @@ nav.nav-top{
 }
 
 .footer-bottom{
-	width: 100%;
+	width: auto;
 	height: 300px;
 	background-color: #9f9d9d;
+	position: relative;
 	.container{
 		height: 300px;
 		background: #9f9d9d url('img/footer.jpg') center no-repeat;
+	}
+	.logo{
+		float: left;
+		width: 200px;
+		padding-top: 225px;
+	}
+}
+
+.menu-footer-container{
+	padding-top: 260px;
+	width: 400px;
+	margin-left: 525px;
+	float: left;
+	a{
+		font-family: Lato;
+		font-weight: 700;
+		font-size: 20px;
+		color: #494949;
+		text-decoration: none;
+	}
+	ul{
+		width: 500px;
+		li{
+			padding-left: 10px;
+			padding-right: 10px;
+			display: inline-block;
+		}
 	}
 }

@@ -32,12 +32,13 @@
 					</div>
 					<div class="nav">
 						<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
-						<div id="search" class="search">
-							<i class="fa fa-search"></i>
+						<div class="search">
+							<i id="search" class="fa fa-search"></i>
+							<div id="search-form" class="search-form">
+								<?php get_search_form(); ?>
+							</div>
 						</div>
-						<div id="search-form" class="search-form">
-							<?php get_search_form(); ?>
-						</div>
+
 					</div>
 				</div>
 			</nav>

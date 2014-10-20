@@ -100,8 +100,8 @@ if( function_exists('acf_add_options_sub_page') ){
 }
 
 function my_search_form( $form ) {
-	$form = '<form role="search" method="post" action="' . home_url( '/' ) . '" >
-	<div><input type="text" value="' . get_search_query() . '" name="s" id="s" /></div>
+	$form = '<form role="search" method="post" action="' . home_url( '/' ) . 'search" >
+	<div><input type="text" value="' . get_search_query() . '" name="search" placeholder="Rechercher..." id="search-input" /></div>
 	</form>';
 
 	return $form;

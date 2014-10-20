@@ -33,4 +33,16 @@ jQuery( document ).ready( function( $ ) {
 		if (xhr.status == 404) $('#page-nav a').remove();
 	});
 
+	var search = $('#search');
+	search.on('click', function(e){
+		e.stopPropagation();
+		//$('#search-form').css('display', 'block');
+		$('#search-form').toggle();
+
+	});
+
+
+
 });
+
+
