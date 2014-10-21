@@ -33,24 +33,24 @@
 
 	label
 	{
-		line-height: 58px;
+		line-height: 40px;
 		display: block;
 		float: left;
 		width: 192px;
 		text-align:right;
 		font-family: Lato;
-		font-weight: 700;
-		font-size: 30px;
+		font-size: 18px;
 		padding-right: 27px;
 	}
 
 
 	input, select
 	{
-		font-size: 25px;
-		border: 2px solid black;
+		font-size: 18px;
+		border: 1px solid black;
 		width: 680px;
-		height: 58px;
+		height: 40px;
+		line-height: 40px;
 		float: left;
 		margin-bottom: 32px;
 	}
@@ -62,7 +62,8 @@
 
 	input[type=submit]
 	{
-		width: 340px;
+		width: 200px;
+		margin-right: 95px;
 		float: right;
 	}
 }
