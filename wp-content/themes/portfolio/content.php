@@ -2,6 +2,7 @@
 /**
  * @package portfolio
  */
+
 ?>
 
 <!-- realisation -->
@@ -9,7 +10,11 @@
 	<a href="<?php the_permalink() ?>">
 		<div class="block-realisation">
 			<?php if (!empty(get_field('image_principal', $post->ID))): ?>
-				<img src="<?php the_field('image_principal'); ?>" alt="">
+				<?php
+					$img_id = get_post_meta($post->ID, 'image_principal', true);
+					$img = wp_get_attachment_image_src($img_id, 'thumb_realisation_list');
+				?>
+				<img src="<?= $img[0]; ?>" alt="">
 			<?php endif; ?>
 			<div class="info-realisation">
 				<span class="name"><?php the_title(); ?></span>

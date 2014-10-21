@@ -62,7 +62,7 @@ function register_technology() {
 		);
 
 	$rewrite = array(
-		'slug'                       => 'cours',
+		'slug'                       => 'technologies',
 		'with_front'                 => true,
 		'hierarchical'               => false,
 		);

@@ -15,7 +15,6 @@ $realisations = new WP_Query(array(
 	'posts_per_page' => 12,
 	'paged' => $paged
 	));
-apply_filters(  'infinite_scroll_query_object', $realisations  );
 ?>
 
 <div id="container-realisation" class="list-realisation">
@@ -25,7 +24,6 @@ apply_filters(  'infinite_scroll_query_object', $realisations  );
 		<?php get_template_part('content-none', get_post_format()); ?>
 	<?php endif; ?>
 
-	<?php //portfolio_paging_nav(); ?>
 	<?php wp_pagenavi(array('query' => $realisations)); ?>
 </div>
 
