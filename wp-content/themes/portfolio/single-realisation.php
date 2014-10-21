@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php //var_dump($post); ?>
+<?php var_dump($post); ?>
 
 
 <div class="single-project">
@@ -30,9 +30,13 @@
 		<div class="block-left">
 
 			<div class="main-image">
-				<?php $image = get_field('image_principal'); ?>
-				<?php if($image): //dont output an empty image tag ?>
-				<img src="<?php echo $image['sizes']['single-size']; ?>" width="<?php echo $image['sizes']['single-size-width']; ?>" height="<?php echo $image['sizes']['single-size-height']; ?>" />
+				<?php
+					$imgid = get_post_meta($post->ID, 'image_principal', true);
+					$img = wp_get_attachment_image_src($imgid, 'single-size');
+					var_dump($img);
+				?>
+				<?php if(!empty($image)): //dont output an empty image tag ?>
+
 				<?php endif; ?>
 			</div>
 
@@ -93,11 +97,7 @@
 	<h1>Autres Réalisations</h1>
 
 	<div class="gallery">
-		<?php foreach ($images = get_field('images', $post->ID) as $key => $image): ?>
-			<div class="image">
-				<img src="<?= $image['sizes']['realisation']; ?>" alt="<?= $image['title']; ?>">
-			</div>
-		<?php endforeach; ?>
+
 	</div>
 
 </div>
