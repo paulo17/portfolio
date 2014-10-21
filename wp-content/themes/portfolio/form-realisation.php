@@ -35,6 +35,6 @@ acf_form(array(
 	));
 
 ?>
-
+	<div style="clear: both;"></div>
 </div>
 <?php get_footer(); ?>

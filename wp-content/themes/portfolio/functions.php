@@ -29,14 +29,24 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 			'gallery',
 			'caption',
 			) );
+
 		add_theme_support( 'post-formats', array(
 			'aside', 'image', 'video', 'quote', 'link',
 			) );
+
+		/*add_theme_support('infinite-scroll', array(
+			'type' => 'scroll',
+			'container' => 'container-realisation',
+			'render' => get_template_part('content', 'archive-realisation'),
+			'footer' => false,
+			'posts_per_page' => 5
+		) );*/
 
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'portfolio' ),
 			'footer' => __( 'Footer Menu', 'portfolio' ),
 			) );
+
 
 	}
 
@@ -71,10 +81,10 @@ add_action('acf/save_post', 'insert_realisation');
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
-	wp_register_script( 'infinite-scroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', 'jquery', '2.0', true );
-	wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', 'jquery', '2.0', true );
+	//wp_register_script( 'infinite-scroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', 'jquery', '2.0', true );
+	wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', 'jquery', '2.1.1', true );
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'infinite-scroll' );
+	//wp_enqueue_script( 'infinite-scroll' );
 	wp_enqueue_script( 'script' );
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
@@ -85,6 +95,7 @@ function custom_acf_deregister_styles(){
 		//wp_deregister_style( 'acf-input' );
 	}
 }
+
 add_action( 'wp_print_styles', 'custom_acf_deregister_styles', 999 );
 
 
@@ -109,3 +120,4 @@ function my_search_form( $form ) {
 }
 
 add_filter( 'get_search_form', 'my_search_form' );
+
