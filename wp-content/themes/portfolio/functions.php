@@ -81,10 +81,10 @@ add_action('acf/save_post', 'insert_realisation');
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
-	wp_register_script( 'infinite-scroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', 'jquery', '2.0', true );
-	wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', 'jquery', '2.0', true );
+	//wp_register_script( 'infinite-scroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', 'jquery', '2.0', true );
+	wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', 'jquery', '2.1.1', true );
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'infinite-scroll' );
+	//wp_enqueue_script( 'infinite-scroll' );
 	wp_enqueue_script( 'script' );
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );

@@ -1,7 +1,7 @@
-jQuery( document ).ready( function( $ ) {
+$( document ).ready( function(  ) {
 
-	var offset = $('#container-realisation article').last().offset();
-	console.log(offset);
+	//var offset = $('#container-realisation article').last().offset();
+	//console.log(offset);
 
 	var search = $('#search');
 	search.on('click', function(e){

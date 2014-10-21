@@ -12,7 +12,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $realisations = new WP_Query(array(
 	'post_type' => 'realisation',
-	'posts_per_page' => 5,
+	'posts_per_page' => 12,
 	'paged' => $paged
 	));
 apply_filters(  'infinite_scroll_query_object', $realisations  );
