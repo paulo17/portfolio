@@ -7,7 +7,7 @@ Template Name: Search Page
 
 <div id="search">
 	<?php 
-		if(isset($_POST['search']))
+		if(isset($_POST['search']) && trim($_POST['search'])!="")
 		{
 			echo '<h2>Résultats pour <em>'.$_POST['search'].'</em></h2>
 			<div class="list-home-realisation">';
