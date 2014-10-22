@@ -668,3 +668,19 @@ nav.nav-top ul.menu a:hover {
   margin-right: 95px;
   float: right;
 }
+
+/* line 71, sass/_register.scss */
+#search {
+  min-height: 400px;
+}
+/* line 75, sass/_register.scss */
+#search h2 {
+  margin: 0px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 48px;
+  color: #494949;
+}
