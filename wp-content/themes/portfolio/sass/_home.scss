@@ -77,8 +77,8 @@ nav.nav-top{
 		line-height: 71px;
 		li{
 			display: inline-block;
-			padding-left: 15px;
-			padding-left: 15px;
+			padding-left: 25px;
+			padding-left: 25px;
 			&.current-menu-item{
 				a{
 					box-sizing: border-box;
@@ -92,7 +92,7 @@ nav.nav-top{
 			text-transform: uppercase;
 			color: #000;
 			font-family: Lato;
-			font-size: 20px;
+			font-size: 16px;
 			&:hover{
 				box-sizing: border-box;
 				padding-bottom: 5px;
@@ -195,13 +195,16 @@ nav.nav-top{
 }
 
 .filter-realisation{
+	width: 680px;
+	margin: auto;
 	.term-list{
 		float: left;
 		width: 200px;
-		li{
-			margin-bottom: 10px;
-			list-style: none;
-		}
+	}
+	select{
+		margin-right: 25px;
+		width: 200px;
+		height: 40px;
 	}
 	a{
 		text-decoration: none;
@@ -298,13 +301,13 @@ nav.nav-top{
 .footer-bottom{
 	width: auto;
 	height: 300px;
-	background-color: #dbdbdb;
+	background-color: #9f9d9e;
 	// background-color: #9f9c9c;
 	position: relative;
 	clear: both;
 	.container{
 		height: 300px;
-		//background: #9f9c9c url('img/footerV2.jpg') center no-repeat;
+		background: #9f9d9e url('img/footerV3.jpg') center no-repeat;
 	}
 	.logo{
 		float: left;
@@ -315,13 +318,12 @@ nav.nav-top{
 
 .menu-footer-container{
 	padding-top: 260px;
-	width: 400px;
-	margin-left: 525px;
+	width: 500px;
+	margin-left: 425px;
 	float: left;
 	a{
 		font-family: Lato;
-		font-weight: 700;
-		font-size: 20px;
+		font-size: 18px;
 		color: #494949;
 		text-decoration: none;
 	}
