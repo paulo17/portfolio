@@ -5,46 +5,39 @@ Template Name: Search Page
  ?>
 <?php get_header(); ?>
 
-<h2>Résultats pour <?php if(isset($_POST['search'])) echo $_POST['search']; ?></h2>
-
-<?php $realisations = new WP_Query(array(
-			'post_type' => 'realisation',
-			'posts_per_page' => 9
-		));
-
-			?>
-
-<div class="list-home-realisation">
-
-	<?php
-	if ( $realisations->have_posts() )
-	{
-		while ( $realisations->have_posts() )
+<div id="search">
+	<?php 
+		if(isset($_POST['search']) && trim($_POST['search'])!="")
 		{
-			$realisations->the_post();
-			if(strpos(get_the_title(),$_POST['search'])  !== false) : ?>
-
-				<a href="<?php the_permalink() ?>">
-					<div class="block-realisation">
-						<?php if (!empty(get_field('image_principal', $post->ID))): ?>
-							<img src="<?php the_field('image_principal'); ?>" alt="">
-						<?php endif ?>
-						<div class="info-realisation">
-							<span class="name"><?php the_title(); ?></span>
-							<span class="promotion"></span>
-						</div>
-
-					</div>
-				</a>
-			<?php endif;
-
+			echo '<h2>Résultats pour <em>'.$_POST['search'].'</em></h2>
+			<div class="list-home-realisation">';
+			$realisations = new WP_Query(array(
+				'post_type' => 'realisation',
+				'orderby' => array('rand'),
+				'posts_per_page' => 9
+			));
+			
+			if ( $realisations->have_posts() )
+			{
+				while ( $realisations->have_posts() )
+				{
+					$realisations->the_post();
+					if(strpos(strtolower(get_the_title()),strtolower($_POST['search'])) !== false) : ?>
+					<?php get_template_part('content', get_post_format()); ?>
+						
+					<?php endif;
+				}
+			}
+			else
+				echo '
+				<p>Il n\'existe aucun projet répertorié</p>';
+				
 		}
-	}
-	else
-		echo '
-		<p>Il n\'existe aucun projet pour le moment</p>';
+		else
+			echo '<h2>Aucun résultat</h2>';
+		
+		?>
 
-	?>
-
+	</div>
 </div>
 <?php get_footer(); ?>
