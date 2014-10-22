@@ -17,18 +17,21 @@
 	?>
 
 	<select id="select-techno" name="technologies" class="term-list technologies">
+	<option value="#">Technologies</option>
 	<?php foreach ($technologies as $key => $technology): ?>
 		<option value="<?= get_term_link($technology); ?>"><?= $technology->name; ?></option>
 	<?php endforeach ?>
 	</select>
 
 	<select id="select-annee" name="annee" class="term-list annee">
+		<option value="#">Années</option>
 		<?php foreach ($annees as $key => $annee): ?>
 			<option value="<?= get_term_link($annee); ?>"><?= $annee->name; ?></option>
 		<?php endforeach ?>
 	</select>
 
-	<select name="promotion" class="term-list promotion">
+	<select id="promotion" name="promotion" class="term-list promotion">
+		<option value="#">Promotions</option>
 		<?php foreach ($promotions as $key => $promotion): ?>
 			<option value="<?= get_term_link($promotion); ?>"><?= $promotion->name; ?></option>
 		<?php endforeach ?>

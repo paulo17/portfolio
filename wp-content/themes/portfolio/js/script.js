@@ -11,7 +11,17 @@ $( document ).ready( function(  ) {
 
 	});
 
+	var techno = $('#select-techno');
+	var annee = $('#select-annee');
+	var promotion = $('#select-promotion');
 
+	function filtre(){
+		window.location.href =  $(this).val();
+	}
+
+	techno.change(filtre);
+	annee.change(filtre);
+	promotion.change(filtre);
 
 });
 
