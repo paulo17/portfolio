@@ -11,7 +11,7 @@ $technologies = get_terms('technologie', array('hide_empty' => 0));
 
 <?php $realisations = new WP_Query(array(
 			'post_type' => 'realisation',
-			'orderby' => array('rand'),
+			'orderby' => 'rand',
 			'posts_per_page' => 9,
 			'paged' => false,
 		)); ?>
