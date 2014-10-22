@@ -11,7 +11,8 @@ Template Name: Formulaire Realisation
 <h2>Ajouter un projet</h2>
 
 <?php
-
+if(!is_user_logged_in())
+	wp_redirect(home_url().'/inscription/?add_project=y');
 acf_form(array(
 	'id' => 'realisation',
 	'post_id' => 'new_post',

@@ -10,6 +10,8 @@ Template Name: Formulaire Inscription
 	<h2>Inscription</h2>
 	<div class="erreurs">
 	<?php
+		if(isset($_GET['add_project']) && $_GET['add_project']=='y')
+			echo 'Veuillez vous inscrire ou vous <a href="'.home_url().'/wp-login.php">connecter.</a><br/>';
 		// _____________________________________________________ VERIFICATIONS DES SAISIES _____________________________________________________
 		$champs = Array();
 		if(isset($_POST['identifiant']))
@@ -57,6 +59,14 @@ Template Name: Formulaire Inscription
 			$user_id = wp_create_user( $champs[0], $champs[2], $champs[1] );
 			add_user_meta( $user_id, 'role', $champs[3]);
 			wp_update_user( array( 'ID' => $user_id, 'role' => 'contributor' ) );
+			
+			$creds = array();
+			$creds['user_login'] = $champs[0];
+			$creds['user_password'] = $champs[2];
+			$creds['remember'] = true;
+			$user = wp_signon( $creds, false );
+			if($user)
+				wp_redirect(home_url());
 		}
 			
 		
