@@ -206,13 +206,14 @@ nav.nav-top ul.menu a:hover {
   min-height: 750px;
   margin: auto;
   margin-bottom: 46px;
+  clear: both;
 }
-/* line 110, sass/_home.scss */
+/* line 111, sass/_home.scss */
 .list-home-realisation a {
   text-decoration: none;
   display: block;
 }
-/* line 114, sass/_home.scss */
+/* line 115, sass/_home.scss */
 .list-home-realisation .block-realisation {
   position: relative;
   float: left;
@@ -220,7 +221,7 @@ nav.nav-top ul.menu a:hover {
   height: 195px;
   margin: 46px 22px 0 22px;
 }
-/* line 120, sass/_home.scss */
+/* line 121, sass/_home.scss */
 .list-home-realisation .block-realisation .filtre {
   width: 294px;
   height: 195px;
@@ -229,17 +230,17 @@ nav.nav-top ul.menu a:hover {
   opacity: 0.5;
   display: none;
 }
-/* line 128, sass/_home.scss */
+/* line 129, sass/_home.scss */
 .list-home-realisation .block-realisation:hover .filtre {
   display: block;
   -webkit-filter: contrast(30%);
   filter: contrast(30%);
 }
-/* line 132, sass/_home.scss */
+/* line 133, sass/_home.scss */
 .list-home-realisation .block-realisation:hover .info-realisation {
   display: block;
 }
-/* line 135, sass/_home.scss */
+/* line 136, sass/_home.scss */
 .list-home-realisation .info-realisation {
   width: 100%;
   text-align: center;
@@ -253,22 +254,23 @@ nav.nav-top ul.menu a:hover {
   top: 0;
   margin-top: 70px;
 }
-/* line 147, sass/_home.scss */
+/* line 148, sass/_home.scss */
 .list-home-realisation .info-realisation span {
   display: block;
 }
 
-/* line 151, sass/_home.scss */
+/* line 152, sass/_home.scss */
 .list-realisation {
   width: 1170px;
   min-height: 750px;
+  clear: both;
 }
-/* line 154, sass/_home.scss */
+/* line 156, sass/_home.scss */
 .list-realisation a {
   display: block;
   text-decoration: none;
 }
-/* line 158, sass/_home.scss */
+/* line 160, sass/_home.scss */
 .list-realisation .block-realisation {
   float: left;
   width: 292px;
@@ -276,21 +278,26 @@ nav.nav-top ul.menu a:hover {
   position: relative;
   cursor: pointer;
 }
-/* line 164, sass/_home.scss */
-.list-realisation .block-realisation img {
-  width: 292px;
+/* line 166, sass/_home.scss */
+.list-realisation .block-realisation .filtre {
+  width: 294px;
   height: 195px;
+  background: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  display: none;
 }
-/* line 169, sass/_home.scss */
-.list-realisation .block-realisation:hover img {
+/* line 174, sass/_home.scss */
+.list-realisation .block-realisation:hover .filtre {
+  display: block;
   -webkit-filter: contrast(30%);
   filter: contrast(30%);
 }
-/* line 170, sass/_home.scss */
+/* line 178, sass/_home.scss */
 .list-realisation .block-realisation:hover .info-realisation {
   display: block;
 }
-/* line 173, sass/_home.scss */
+/* line 181, sass/_home.scss */
 .list-realisation .info-realisation {
   width: 100%;
   text-align: center;
@@ -304,25 +311,55 @@ nav.nav-top ul.menu a:hover {
   top: 0;
   margin-top: 70px;
 }
-/* line 185, sass/_home.scss */
+/* line 193, sass/_home.scss */
 .list-realisation .info-realisation span {
   display: block;
 }
 
-/* line 189, sass/_home.scss */
+/* line 198, sass/_home.scss */
+.filter-realisation .term-list {
+  float: left;
+  width: 200px;
+}
+/* line 201, sass/_home.scss */
+.filter-realisation .term-list li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+/* line 206, sass/_home.scss */
+.filter-realisation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-family: Lato;
+  display: block;
+  background-color: #dbdbdb;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+/* line 217, sass/_home.scss */
+.filter-realisation a:hover {
+  cursor: pointer;
+  background-color: #7f8c8d;
+  color: #fff;
+}
+
+/* line 225, sass/_home.scss */
 .form-realisation {
   height: auto;
   background-color: #fafafa;
   border-left: 2px solid #e6e6e6;
   border-right: 2px solid #e6e6e6;
 }
-/* line 194, sass/_home.scss */
+/* line 230, sass/_home.scss */
 .form-realisation form {
   width: 1000px;
   height: auto;
   margin: auto;
 }
-/* line 199, sass/_home.scss */
+/* line 235, sass/_home.scss */
 .form-realisation h2 {
   width: 400px;
   margin: auto;
@@ -333,39 +370,39 @@ nav.nav-top ul.menu a:hover {
   font-size: 48px;
   color: #494949;
 }
-/* line 209, sass/_home.scss */
+/* line 245, sass/_home.scss */
 .form-realisation .acf-field {
   float: left;
 }
-/* line 211, sass/_home.scss */
+/* line 247, sass/_home.scss */
 .form-realisation .acf-field > .acf-input {
   float: left;
   width: 680px;
 }
-/* line 214, sass/_home.scss */
+/* line 250, sass/_home.scss */
 .form-realisation .acf-field > .acf-input input[type="text"], .form-realisation .acf-field > .acf-input input[type="url"], .form-realisation .acf-field > .acf-input select {
   height: 40px;
   line-height: 40px;
 }
-/* line 219, sass/_home.scss */
+/* line 255, sass/_home.scss */
 .form-realisation .acf-field.field_type-repeater {
   float: none;
   clear: both;
 }
-/* line 223, sass/_home.scss */
+/* line 259, sass/_home.scss */
 .form-realisation .acf-field.field_type-repeater table td {
   line-height: 40px;
 }
-/* line 224, sass/_home.scss */
+/* line 260, sass/_home.scss */
 .form-realisation .acf-field.field_type-repeater table .acf-input {
   float: none;
   width: 200px;
 }
-/* line 228, sass/_home.scss */
+/* line 264, sass/_home.scss */
 .form-realisation .acf-field.field_type-repeater table .acf-field {
   float: none;
 }
-/* line 234, sass/_home.scss */
+/* line 270, sass/_home.scss */
 .form-realisation .acf-label {
   line-height: 58px;
   display: block;
@@ -377,7 +414,7 @@ nav.nav-top ul.menu a:hover {
   font-size: 30px;
   padding-right: 27px;
 }
-/* line 245, sass/_home.scss */
+/* line 281, sass/_home.scss */
 .form-realisation .acf-form-submit {
   clear: both;
   height: 50px;
@@ -385,7 +422,7 @@ nav.nav-top ul.menu a:hover {
   margin-top: 20px;
   margin-right: 100px;
 }
-/* line 251, sass/_home.scss */
+/* line 287, sass/_home.scss */
 .form-realisation .acf-form-submit input[type="submit"] {
   font-size: 18px;
   border: 2px solid black;
@@ -393,12 +430,12 @@ nav.nav-top ul.menu a:hover {
   height: 40px;
   margin-bottom: 32px;
 }
-/* line 257, sass/_home.scss */
+/* line 293, sass/_home.scss */
 .form-realisation .acf-form-submit input[type="submit"]:hover {
   cursor: pointer;
 }
 
-/* line 262, sass/_home.scss */
+/* line 298, sass/_home.scss */
 .footer-bottom {
   width: auto;
   height: 300px;
@@ -406,25 +443,25 @@ nav.nav-top ul.menu a:hover {
   position: relative;
   clear: both;
 }
-/* line 268, sass/_home.scss */
+/* line 305, sass/_home.scss */
 .footer-bottom .container {
   height: 300px;
 }
-/* line 272, sass/_home.scss */
+/* line 309, sass/_home.scss */
 .footer-bottom .logo {
   float: left;
   width: 200px;
   padding-top: 225px;
 }
 
-/* line 279, sass/_home.scss */
+/* line 316, sass/_home.scss */
 .menu-footer-container {
   padding-top: 260px;
   width: 400px;
   margin-left: 525px;
   float: left;
 }
-/* line 284, sass/_home.scss */
+/* line 321, sass/_home.scss */
 .menu-footer-container a {
   font-family: Lato;
   font-weight: 700;
@@ -432,11 +469,11 @@ nav.nav-top ul.menu a:hover {
   color: #494949;
   text-decoration: none;
 }
-/* line 291, sass/_home.scss */
+/* line 328, sass/_home.scss */
 .menu-footer-container ul {
   width: 500px;
 }
-/* line 293, sass/_home.scss */
+/* line 330, sass/_home.scss */
 .menu-footer-container ul li {
   padding-left: 10px;
   padding-right: 10px;

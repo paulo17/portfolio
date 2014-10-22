@@ -1,13 +1,6 @@
 <?php get_header(); ?>
 
-<?php
-$technologies = get_terms('technologie', array('hide_empty' => 0));
-// var_dump($technologies);
-?>
 
-<?php foreach ($technologies as $key => $technology): ?>
-	<a href="<?= get_term_link($technology); ?>"><?= $technology->name; ?></a>
-<?php endforeach ?>
 
 <?php $realisations = new WP_Query(array(
 			'post_type' => 'realisation',
@@ -15,6 +8,33 @@ $technologies = get_terms('technologie', array('hide_empty' => 0));
 			'posts_per_page' => 9,
 			'paged' => false,
 		)); ?>
+
+<div class="filter-realisation">
+	<?php
+		$technologies = get_terms('technologie', array('hide_empty' => 0));
+		$annees = get_terms('annee', array('hide_empty' => 0));
+		$promotions = get_terms('promotion', array('hide_empty' => 0));
+	?>
+
+	<select id="select-techno" name="technologies" class="term-list technologies">
+	<?php foreach ($technologies as $key => $technology): ?>
+		<option value="<?= get_term_link($technology); ?>"><?= $technology->name; ?></option>
+	<?php endforeach ?>
+	</select>
+
+	<select id="select-annee" name="annee" class="term-list annee">
+		<?php foreach ($annees as $key => $annee): ?>
+			<option value="<?= get_term_link($annee); ?>"><?= $annee->name; ?></option>
+		<?php endforeach ?>
+	</select>
+
+	<select name="promotion" class="term-list promotion">
+		<?php foreach ($promotions as $key => $promotion): ?>
+			<option value="<?= get_term_link($promotion); ?>"><?= $promotion->name; ?></option>
+		<?php endforeach ?>
+	</select>
+	<div style="clear: both;"></div>
+</div>
 
 <div class="list-home-realisation">
 
