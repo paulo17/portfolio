@@ -681,20 +681,35 @@ nav.nav-top ul.menu a:hover {
   margin: 30px 22px 0 22px;
 }
 /* line 150, sass/_realisation.scss */
+.single-others .block-realisation .filtre {
+  width: 294px;
+  height: 195px;
+  background: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  display: none;
+}
+/* line 157, sass/_realisation.scss */
 .single-others .block-realisation img {
   width: 294px;
   height: 195px;
 }
-/* line 155, sass/_realisation.scss */
+/* line 162, sass/_realisation.scss */
+.single-others .block-realisation:hover .filtre {
+  display: block;
+  -webkit-filter: contrast(30%);
+  filter: contrast(30%);
+}
+/* line 166, sass/_realisation.scss */
 .single-others .block-realisation:hover img {
   -webkit-filter: contrast(30%);
   filter: contrast(30%);
 }
-/* line 156, sass/_realisation.scss */
+/* line 167, sass/_realisation.scss */
 .single-others .block-realisation:hover .info-realisation {
   display: block;
 }
-/* line 159, sass/_realisation.scss */
+/* line 170, sass/_realisation.scss */
 .single-others .info-realisation {
   width: 100%;
   text-align: center;
@@ -708,7 +723,7 @@ nav.nav-top ul.menu a:hover {
   top: 0;
   margin-top: 70px;
 }
-/* line 171, sass/_realisation.scss */
+/* line 182, sass/_realisation.scss */
 .single-others .info-realisation span {
   display: block;
 }

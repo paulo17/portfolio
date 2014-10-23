@@ -142,16 +142,27 @@ $lato: 'Lato', sans-serif;
 	}
 
 	.block-realisation{
-			position: relative;
-			float: left;
+		position: relative;
+		float: left;
+		width: 294px;
+		height: 195px;
+		margin: 30px 22px 0 22px;
+		.filtre{
 			width: 294px;
 			height: 195px;
-			margin: 30px 22px 0 22px;
+			background: #000;
+			@include opacity(0.5);
+			display: none;
+		}
 		img {
 			width: 294px;
 			height: 195px;
 		}
 		&:hover{
+			.filtre {
+				display: block;
+				@include filter(contrast(30%));
+			}
 			img{ @include filter(contrast(30%)); }
 			.info-realisation{ display: block; }
 		}

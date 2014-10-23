@@ -6,6 +6,8 @@ Template Name: Liste des réalisations
 
 <?php get_header(); ?>
 
+<?php get_template_part('filter'); ?>
+
 <div id="container-realisation" class="list-realisation">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

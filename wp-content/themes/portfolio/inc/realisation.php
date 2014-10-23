@@ -35,7 +35,7 @@ function register_realisation() {
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
+		'capability_type'     => array('page', 'posts'),
 		);
 	register_post_type( 'realisation', $args );
 

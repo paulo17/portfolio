@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="url">
-				<a href="<?php the_field('url'); ?>"><?php the_field('url'); ?></a>
+				<a target="_blank" href="<?php the_field('url'); ?>"><?php the_field('url'); ?></a>
 			</div>
 
 			<div class="client">
@@ -66,20 +66,20 @@
 			<div class="createur">
 				<span>
 				<?php if( have_rows('membres_dequipe') ): ?>
-			 
+
 				    <?php while( have_rows('membres_dequipe') ): the_row(); ?>
-				 
+
 						<span><?php the_sub_field('prenom'); ?> <?php the_sub_field('nom'); ?>, </span>
-				        
+
 				    <?php endwhile; ?>
-			 
+
 				<?php endif; ?>
 				</span>
 			</div>
 
 			<div class="technologie">
 				<span>
-				
+
 				    <p><?php get_the_term_list($post->ID, 'technologies'); ?></p>
 
 				</span>

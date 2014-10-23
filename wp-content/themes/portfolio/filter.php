@@ -19,7 +19,7 @@
 		<?php endforeach ?>
 	</select>
 
-	<select id="promotion" name="promotion" class="term-list promotion">
+	<select id="select-promotion" name="promotion" class="term-list promotion">
 		<option value="#">Promotions</option>
 		<?php foreach ($promotions as $key => $promotion): ?>
 			<option value="<?= get_term_link($promotion); ?>"><?= $promotion->name; ?></option>
